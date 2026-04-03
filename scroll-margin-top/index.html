@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>scroll-margin-top — DevIgnitor CSS Tricks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link reg="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="page-header">
+  <div class="brand"><strong>DevIgnitor</strong> — CSS Tricks Series</div>
+  <div class="trick-label">01 / 05</div>
+</header>
+
+<div class="title-block">
+  <div class="trick-index">// Trick 01</div>
+  <h1><code>scroll-margin-top</code></h1>
+  <p class="subtitle">Anchor links no longer hide behind your sticky navbar. One property fixes the offset — no JavaScript, no scroll padding hacks.</p>
+</div>
+
+<div class="demo-wrap">
+  <div class="demo-label">Live Demo</div>
+  <div class="demo-inner">
+    <div class="jump-bar">
+      <span class="jump-title">JUMP TO →</span>
+      <button class="jump-btn" onclick="scrollToSection('sec1')">Section 1</button>
+      <button class="jump-btn" onclick="scrollToSection('sec2')">Section 2</button>
+      <button class="jump-btn" onclick="scrollToSection('sec3')">Section 3</button>
+    </div>
+
+    <div class="scroll-viewport" id="vp">
+      <div class="fake-nav">
+        <span class="fake-nav-brand">DEVIGNITOR.COM</span>
+        <span class="fake-nav-tag">sticky nav — 44px height</span>
+      </div>
+      <div class="scroll-content">
+        <div class="section-block s1" id="sec1">
+          <div class="section-tag">Section 01</div>
+          <div class="section-title">Introduction to CSS Layouts</div>
+          <div class="section-body">Without scroll-margin-top, this heading would slide under the sticky navigation bar when jumped to via anchor link. Notice it lands perfectly — 44px below the nav, exactly right.</div>
+        </div>
+        <div class="section-block s2" id="sec2">
+          <div class="section-tag">Section 02</div>
+          <div class="section-title">Flexbox &amp; Grid Fundamentals</div>
+          <div class="section-body">The scroll-margin-top value should match your sticky nav height. Here it's set to 44px — the exact height of the dark navigation bar above. Clean, precise, predictable.</div>
+        </div>
+        <div class="section-block s3" id="sec3">
+          <div class="section-tag">Section 03</div>
+          <div class="section-title">Advanced Positioning</div>
+          <div class="section-body">This technique works with any scroll container, not just the root viewport. Set it once per element class and forget about it. Works with smooth scroll and instant scroll alike.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="insight-row">
+  <div class="insight-cell">
+    <div class="insight-label">Property</div>
+    <div class="insight-value accent">scroll-margin-top: 44px</div>
+  </div>
+  <div class="insight-cell">
+    <div class="insight-label">Use case</div>
+    <div class="insight-value">Sticky nav offset for anchor links</div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="footer-brand"><strong>DevIgnitor</strong> — devignitor.com</div>
+  <div class="footer-nav">CSS Tricks — 01 / 05</div>
+</footer>
+
+</body>
+</html>
