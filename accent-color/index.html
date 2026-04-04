@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>accent-color — DevIgnitor CSS Tricks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="page-header">
+  <div class="brand"><strong>DevIgnitor</strong> — CSS Tricks Series</div>
+  <div class="trick-label">02 / 05</div>
+</header>
+
+<div class="title-block">
+  <div class="trick-index">// Trick 02</div>
+  <h1><code>accent-color</code></h1>
+  <p class="subtitle">Brand-color your native form controls — checkbox, radio, range, progress — with a single CSS property. No wrappers, no JS, no custom components.</p>
+</div>
+
+<div class="demo-wrap">
+  <div class="demo-label">Live Demo</div>
+  <div class="demo-inner">
+
+    <div class="compare-grid">
+      <div class="compare-col before-col">
+        <div class="col-header">
+          <span class="col-tag tag-before">Without</span>
+          <span class="col-title">Browser default</span>
+        </div>
+        <div class="control-row">
+          <div class="ctrl-item">
+            <span class="ctrl-label">checkbox</span>
+            <input type="checkbox" checked>
+            <input type="checkbox">
+          </div>
+          <div class="ctrl-item">
+            <span class="ctrl-label">radio</span>
+            <input type="radio" name="rb" checked>
+            <input type="radio" name="rb">
+          </div>
+          <div class="ctrl-item">
+            <span class="ctrl-label">range</span>
+            <input type="range" value="60">
+          </div>
+          <div class="ctrl-item">
+            <span class="ctrl-label">progress</span>
+            <progress value="60" max="100"></progress>
+          </div>
+        </div>
+      </div>
+
+      <div class="compare-col after-col" id="after-col">
+        <div class="col-header">
+          <span class="col-tag tag-after">With accent-color</span>
+          <span class="col-title">Brand colored</span>
+        </div>
+        <div class="control-row">
+          <div class="ctrl-item">
+            <span class="ctrl-label" style="font-family:var(--mono);font-size:11px;color:var(--ink3);min-width:70px">checkbox</span>
+            <input type="checkbox" checked>
+            <input type="checkbox">
+          </div>
+          <div class="ctrl-item">
+            <span class="ctrl-label" style="font-family:var(--mono);font-size:11px;color:var(--ink3);min-width:70px">radio</span>
+            <input type="radio" name="rb2" checked>
+            <input type="radio" name="rb2">
+          </div>
+          <div class="ctrl-item">
+            <span class="ctrl-label" style="font-family:var(--mono);font-size:11px;color:var(--ink3);min-width:70px">range</span>
+            <input type="range" value="60">
+          </div>
+          <div class="ctrl-item">
+            <span class="ctrl-label" style="font-family:var(--mono);font-size:11px;color:var(--ink3);min-width:70px">progress</span>
+            <progress value="60" max="100"></progress>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="picker-section">
+      <div class="picker-label-group">
+        <span class="picker-label">Pick your brand color</span>
+        <div class="picker-wrap">
+          <input type="color" id="color-picker" value="#e63329">
+          <span class="picker-value" id="hex-label">#e63329</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px">
+        <span style="font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:0.1em;text-transform:uppercase">Live preview</span>
+        <div id="live-wrap">
+          <input type="checkbox" checked>
+          <input type="radio" checked>
+          <input type="range" value="65" style="width:120px">
+          <progress value="65" max="100" style="width:120px;height:12px;border:none"></progress>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="insight-row">
+  <div class="insight-cell">
+    <div class="insight-label">Property</div>
+    <div class="insight-value accent">accent-color: #e63329</div>
+  </div>
+  <div class="insight-cell">
+    <div class="insight-label">Applies to</div>
+    <div class="insight-value">checkbox · radio · range · progress</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<footer class="page-footer">
+  <div class="footer-brand"><strong>DevIgnitor</strong> — devignitor.com</div>
+  <div class="footer-nav">CSS Tricks — 02 / 05</div>
+</footer>
+
+
+</body>
+</html>
