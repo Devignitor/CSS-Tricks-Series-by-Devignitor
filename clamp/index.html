@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code-files - Preview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>clamp() — DevIgnitor CSS Tricks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="page-header">
+  <div class="brand"><strong>DevIgnitor</strong> — CSS Tricks Series</div>
+  <div class="trick-label">03 / 05</div>
+</header>
+
+<div class="title-block">
+  <div class="trick-index">// Trick 03</div>
+  <h1><code>clamp()</code></h1>
+  <p class="subtitle">Fluid typography without media queries. Set a minimum, a viewport-relative preferred value, and a maximum — all in one line. Drag the slider to see the difference.</p>
+</div>
+
+<div class="demo-wrap">
+  <div class="demo-label">Live Demo</div>
+  <div class="demo-inner">
+
+    <div class="slider-control">
+      <span class="slider-label">Container width →</span>
+      <input type="range" id="width-range" min="260" max="748" value="500" step="1">
+      <span class="slider-val" id="width-val">500px</span>
+    </div>
+
+    <div class="comparison">
+      <div class="comp-row header">
+        <div class="comp-method">Method</div>
+        <div class="comp-preview">Result (drag slider)</div>
+        <div class="comp-verdict">Verdict</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-method" style="color:var(--green)">clamp()<br><span style="color:var(--ink3);font-size:9px">18px → 4vw → 48px</span></div>
+        <div class="comp-preview" id="p-clamp" style="color:var(--green);font-size:28px">DevIgnitor</div>
+        <div class="comp-verdict v-good">✓ Fluid</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-method" style="color:var(--accent)">fixed px<br><span style="color:var(--ink3);font-size:9px">font-size: 32px</span></div>
+        <div class="comp-preview" style="color:var(--accent);font-size:32px" id="p-fixed">DevIgnitor</div>
+        <div class="comp-verdict v-bad">✗ Rigid</div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-method" style="color:var(--amber)">bare vw<br><span style="color:var(--ink3);font-size:9px">font-size: 5vw</span></div>
+        <div class="comp-preview" id="p-vw" style="color:var(--amber)">DevIgnitor</div>
+        <div class="comp-verdict v-bad2">~ No floor</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="insight-row">
+  <div class="insight-cell">
+    <div class="insight-label">Syntax</div>
+    <div class="insight-value accent">clamp(min, preferred, max)</div>
+  </div>
+  <div class="insight-cell">
+    <div class="insight-label">Replaces</div>
+    <div class="insight-value">Multiple @media breakpoints</div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="footer-brand"><strong>DevIgnitor</strong> — devignitor.com</div>
+  <div class="footer-nav">CSS Tricks — 03 / 05</div>
+</footer>
+
+
+</body>
+</html>
+    <script src="script.js"></script>
+</body>
+</html>
