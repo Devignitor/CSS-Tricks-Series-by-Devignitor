@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aspect-ratio — DevIgnitor CSS Tricks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="page-header">
+  <div class="brand"><strong>DevIgnitor</strong> — CSS Tricks Series</div>
+  <div class="trick-label">04 / 05</div>
+</header>
+
+<div class="title-block">
+  <div class="trick-index">// Trick 04</div>
+  <h1><code>aspect-ratio</code></h1>
+  <p class="subtitle">Lock any element to a perfect ratio — cards, videos, avatars — without padding hacks. One property. The browser handles the math.</p>
+</div>
+
+<div class="demo-wrap">
+  <div class="demo-label">Live Demo</div>
+  <div class="demo-inner">
+
+    <div class="ratio-section-label">Common ratios — resize window to see them hold</div>
+    <div class="ratio-grid">
+      <div class="ratio-item">
+        <div class="ratio-tag tag-sq">1 / 1</div>
+        <div class="ratio-box box-sq">
+          <div class="ratio-box-inner">
+            <span class="ratio-value">1:1</span>
+            <span class="ratio-use">avatar · thumbnail</span>
+          </div>
+        </div>
+      </div>
+      <div class="ratio-item">
+        <div class="ratio-tag tag-16">16 / 9</div>
+        <div class="ratio-box box-16">
+          <div class="ratio-box-inner">
+            <span class="ratio-value">16:9</span>
+            <span class="ratio-use">video · banner</span>
+          </div>
+        </div>
+      </div>
+      <div class="ratio-item">
+        <div class="ratio-tag tag-43">4 / 3</div>
+        <div class="ratio-box box-43">
+          <div class="ratio-box-inner">
+            <span class="ratio-value">4:3</span>
+            <span class="ratio-use">card · photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="hack-compare">
+      <div class="hack-card">
+        <div class="hack-header">
+          <span class="hack-tag" style="background:#fdecea;color:var(--accent)">Old Hack</span>
+          <span class="hack-title">Padding-top trick</span>
+        </div>
+        <div class="hack-body">
+          <pre><span class="bad-code">.video {
+  position: relative;
+  padding-top: 56.25%;
+  <span class="comment">/* 9/16 = 0.5625 */</span>
+}
+.video iframe {
+  position: absolute;
+  inset: 0;
+}</span></pre>
+        </div>
+      </div>
+      <div class="hack-card">
+        <div class="hack-header">
+          <span class="hack-tag" style="background:var(--green-light);color:var(--green)">Modern</span>
+          <span class="hack-title">aspect-ratio</span>
+        </div>
+        <div class="hack-body">
+          <pre><span class="good-code">.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  <span class="comment">/* That's it. Done. */</span>
+}
+
+<span class="comment">/* No extra wrappers
+   No positioning needed */</span></span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="playground">
+      <div class="play-label">Custom ratio playground</div>
+      <div class="play-controls">
+        <div class="play-ctrl">
+          <label>W</label>
+          <input type="number" id="ratio-w" value="3" min="1" max="20">
+          <span class="play-sep">/</span>
+          <input type="number" id="ratio-h" value="2" min="1" max="20">
+          <label>H</label>
+        </div>
+      </div>
+      <div class="play-preview-row">
+        <div id="play-box" style="aspect-ratio:3/2">
+          <span class="play-box-label" id="play-box-label">3 / 2</span>
+        </div>
+        <div class="play-info">
+          aspect-ratio: <span id="info-ratio">3 / 2</span><br>
+          width: <span>200px</span><br>
+          height: <span id="info-h">133px</span> (auto)
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="insight-row">
+  <div class="insight-cell">
+    <div class="insight-label">Property</div>
+    <div class="insight-value accent">aspect-ratio: 16 / 9</div>
+  </div>
+  <div class="insight-cell">
+    <div class="insight-label">Replaces</div>
+    <div class="insight-value">padding-top % hack + abs positioning</div>
+  </div>
+</div>
+<script src="script.js"></script>
+<footer class="page-footer">
+  <div class="footer-brand"><strong>DevIgnitor</strong> — devignitor.com</div>
+  <div class="footer-nav">CSS Tricks — 04 / 05</div>
+</footer>
+
+
+</body>
+</html>
