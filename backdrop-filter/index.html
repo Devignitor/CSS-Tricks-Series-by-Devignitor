@@ -1,1 +1,114 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code-files - Preview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>backdrop-filter — DevIgnitor CSS Tricks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Barlow:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="page-header">
+  <div class="brand"><strong>DevIgnitor</strong> — CSS Tricks Series</div>
+  <div class="trick-label">05 / 05</div>
+</header>
+
+<div class="title-block">
+  <div class="trick-index">// Trick 05</div>
+  <h1><code>backdrop-filter</code></h1>
+  <p class="subtitle">Apply visual effects — blur, brightness, saturation — to whatever is rendered behind an element. The secret behind premium glassmorphism UI. Pure CSS, zero JavaScript.</p>
+</div>
+
+<div class="demo-wrap">
+  <div class="demo-label">Live Demo</div>
+  <div class="demo-inner">
+    <div class="glass-stage">
+      <div class="stage-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+      </div>
+
+      <!-- Card WITH backdrop-filter -->
+      <div class="glass-card on" id="card-on">
+        <div class="card-badge badge-on">blur ON</div>
+        <h3>Glass Effect</h3>
+        <p>backdrop-filter active</p>
+      </div>
+
+      <!-- Card WITHOUT backdrop-filter -->
+      <div class="glass-card off" id="card-off">
+        <div class="card-badge badge-off">blur OFF</div>
+        <h3>No Effect</h3>
+        <p>backdrop-filter: none</p>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <div class="ctrl-section">
+        <span class="ctrl-label">Blur amount</span>
+        <div class="ctrl-row">
+          <input type="range" id="blur-range" min="0" max="40" value="18" style="width:120px">
+          <span class="ctrl-value" id="blur-val">18px</span>
+        </div>
+      </div>
+
+      <div class="ctrl-divider"></div>
+
+      <div class="ctrl-section">
+        <span class="ctrl-label">Saturation</span>
+        <div class="ctrl-row">
+          <input type="range" id="sat-range" min="80" max="300" value="160" style="width:120px">
+          <span class="ctrl-value" id="sat-val">160%</span>
+        </div>
+      </div>
+
+      <div class="ctrl-divider"></div>
+
+      <div class="ctrl-section">
+        <span class="ctrl-label">Filter on card</span>
+        <div class="toggle-group">
+          <button class="toggle-btn active" id="btn-blur" onclick="applyMode('blur')">blur</button>
+          <button class="toggle-btn" id="btn-gray" onclick="applyMode('grayscale')">grayscale</button>
+          <button class="toggle-btn" id="btn-bright" onclick="applyMode('brightness')">brightness</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="insight-row">
+  <div class="insight-cell">
+    <div class="insight-label">Property</div>
+    <div class="insight-value accent">backdrop-filter: blur() saturate()</div>
+  </div>
+  <div class="insight-cell">
+    <div class="insight-label">Safari prefix required</div>
+    <div class="insight-value">-webkit-backdrop-filter</div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="footer-brand"><strong>DevIgnitor</strong> — devignitor.com</div>
+  <div class="footer-nav">CSS Tricks — 05 / 05</div>
+</footer>
+
+
+</body>
+</html>
+    <script src="script.js"></script>
+</body>
+</html>
